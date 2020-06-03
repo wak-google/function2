@@ -124,5 +124,7 @@ if (FU2_IS_TOP_LEVEL_PROJECT)
 
   include(cmake/CMakeLists.txt)
 
-  add_subdirectory(test)
+  if (BUILD_TESTING)
+    add_subdirectory(test)
+  endif()
 endif ()
